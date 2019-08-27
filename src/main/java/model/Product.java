@@ -2,51 +2,28 @@ package model;
 
 import org.bson.codecs.pojo.annotations.BsonProperty;
 
-import java.util.Arrays;
 import java.util.List;
-
-class Price {
-    private int value;
-
-    public Price(int value, String currency) {
-        this.value = value;
-        this.currency = currency;
-    }
-
-    private String currency;
-
-    public int getValue() {
-        return value;
-    }
-
-    public void setValue(int value) {
-        this.value = value;
-    }
-
-    public String getCurrency() {
-        return currency;
-    }
-
-    public void setCurrency(String currency) {
-        this.currency = currency;
-    }
-
-    @Override
-    public String toString() {
-        return "Price{" +
-                "value=" + value +
-                ", currency='" + currency + '\'' +
-                '}';
-    }
-}
 
 public class Product {
     private int prodId;
     private String name;
-    private Price price;
-    private int quantity;
+    private String price;
+    private int qty;
     private String category;
-    private List<String> colors;
+    private List<String> color;
+
+    public Product() {
+
+    }
+
+    public Product(int prodId, String name, String price, int qty, String category, List<String> color) {
+        this.prodId = prodId;
+        this.name = name;
+        this.price = price;
+        this.qty = qty;
+        this.category = category;
+        this.color = color;
+    }
 
     public int getProdId() {
         return prodId;
@@ -65,26 +42,19 @@ public class Product {
     }
 
     public String getPrice() {
-        int value = this.price.getValue();
-        String currency = this.price.getCurrency();
-        return value + currency;
+        return price;
     }
 
-    @BsonProperty("price")
     public void setPrice(String price) {
-        int value = Integer.parseInt(price.substring(0, price.length() -1));
-        String currency = price.substring(price.length() -1);
-        Price customPrice = new Price(value, currency);
-        this.price = customPrice;
+        this.price = price;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public int getQty() {
+        return qty;
     }
 
-    @BsonProperty("qty")
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setQty(int qty) {
+        this.qty = qty;
     }
 
     public String getCategory() {
@@ -95,13 +65,12 @@ public class Product {
         this.category = category;
     }
 
-    public List<String> getColors() {
-        return colors;
+    public List<String> getColor() {
+        return color;
     }
 
-    @BsonProperty("color")
-    public void setColors(List<String> colors) {
-        this.colors = colors;
+    public void setColor(List<String> color) {
+        this.color = color;
     }
 
     @Override
@@ -110,9 +79,9 @@ public class Product {
                 "prodId=" + prodId +
                 ", name='" + name + '\'' +
                 ", price=" + price +
-                ", quantity=" + quantity +
+                ", qty=" + qty +
                 ", category='" + category + '\'' +
-                ", colors=" + colors +
+                ", color=" + color +
                 '}';
     }
 }
