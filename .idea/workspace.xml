@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61c14312-a796-4209-8879-82f0fc814746" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Price.java" afterDir="false" />
+    <list default="true" id="61c14312-a796-4209-8879-82f0fc814746" name="Default Changelist" comment="working everything">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Interface/IProductServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Interface/ISaleServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Sale.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ProductsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/ProductServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/ProductServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/db/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/Dao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/teste/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/teste/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/ProductServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/ProductServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/Dao$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/Dao$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/Dao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/Dao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Price.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Price.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/teste/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/teste/App.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -50,17 +47,18 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Deathangel\IdeaProjects\BackofficeLoja\src\main\resources" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Deathangel\IdeaProjects\BackofficeLoja\src\main\java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Controllers" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Deathangel\IdeaProjects\BackofficeLoja\src\main\java" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Deathangel\IdeaProjects\BackofficeLoja\src\main\java\Views" />
+      <recent name="C:\Users\Deathangel\IdeaProjects\BackofficeLoja\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -106,6 +104,14 @@
       <option name="presentableId" value="Default" />
       <updated>1566505138749</updated>
     </task>
+    <task id="LOCAL-00001" summary="working everything">
+      <created>1566935247449</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1566935247449</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -120,5 +126,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="working everything" />
+    <option name="LAST_COMMIT_MESSAGE" value="working everything" />
   </component>
 </project>

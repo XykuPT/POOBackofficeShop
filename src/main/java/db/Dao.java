@@ -8,9 +8,13 @@ import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import model.Product;
+import model.Sale;
 import org.bson.Document;
 import org.bson.codecs.configuration.CodecRegistry;
 import org.bson.codecs.pojo.PojoCodecProvider;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static com.mongodb.client.model.Filters.eq;
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
@@ -25,26 +29,40 @@ public class Dao {
         database = mongoClient.getDatabase("products");
     }
 
-    static public void  getCollection() {
+     public static List<?> getCollection(String type) {
         CodecRegistry pojoCodecRegistry = fromRegistries(MongoClientSettings.getDefaultCodecRegistry(),
                 fromProviders(PojoCodecProvider.builder().automatic(true).build()));
-        MongoCollection<Product> collection = database.getCollection("products", Product.class).withCodecRegistry(pojoCodecRegistry);
-        collection.find().forEach(new Block<Product>() {
-            @Override
-            public void apply(Product product) {
-                System.out.println( product );
-            }
-        });
-        System.out.println( collection.countDocuments() );
+
+        if(type == "products"){
+            MongoCollection<Product> collection = database.getCollection("products", Product.class).withCodecRegistry(pojoCodecRegistry);
+//            collection.find().forEach(new Block<Product>() {
+//                @Override
+//                public void apply(Product product) {
+//                    output.addAll()
+//                }
+//            });
+            List<Product> output = collection.find().into(new ArrayList<Product>());
+
+            return output;
+        }else if(type == "sales"){
+            MongoCollection<Sale> collection = database.getCollection("sales", Sale.class).withCodecRegistry(pojoCodecRegistry);
+            List<Sale> output = collection.find().into(new ArrayList<Sale>());
+            return output;
+
+        }else {
+            return null;
+        }
     }
-    static public void insertDocument(Product product){
+    
+    
+    public void insertDocument(Object input){
         CodecRegistry pojoCodecRegistry = fromRegistries(MongoClientSettings.getDefaultCodecRegistry(),
                 fromProviders(PojoCodecProvider.builder().automatic(true).build()));
         MongoCollection<Product> collection = database.getCollection("products", Product.class).withCodecRegistry(pojoCodecRegistry);
-        collection.insertOne(product);
+        collection.insertOne((Product) input);
     }
 
-    static public void updateDocument(Product product){
+    public void updateDocument(Product product){
         CodecRegistry pojoCodecRegistry = fromRegistries(MongoClientSettings.getDefaultCodecRegistry(),
                 fromProviders(PojoCodecProvider.builder().automatic(true).build()));
         MongoCollection<Product> collection = database.getCollection("products", Product.class).withCodecRegistry(pojoCodecRegistry);

@@ -1,7 +1,5 @@
 package model;
 
-import org.bson.codecs.pojo.annotations.BsonProperty;
-
 import java.util.List;
 
 public class Product {
