@@ -1,24 +1,42 @@
 package model;
 
-import java.util.List;
-
 public class Sale {
-    private List<Product> product;
+    private int saleId;
+    private String status;
+    private int[] products;
     private int total;
     private int totalqty;
 
-    public Sale(List<Product> product, int total, int totalqty) {
-        this.product = product;
+    public Sale(int saleId, String status, int[] products, int total, int totalqty) {
+        this.saleId = saleId;
+        this.status = status;
+        this.products = products;
         this.total = total;
         this.totalqty = totalqty;
     }
 
-    public List<Product> getProduct() {
-        return product;
+    public int getSaleId() {
+        return saleId;
     }
 
-    public void setProduct(List<Product> product) {
-        this.product = product;
+    public void setSaleId(int saleId) {
+        this.saleId = saleId;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public int[] getProduct() {
+        return products;
+    }
+
+    public void setProduct(int[] products) {
+        this.products = products;
     }
 
     public int getTotal() {

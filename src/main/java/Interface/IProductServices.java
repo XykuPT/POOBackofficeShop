@@ -6,12 +6,12 @@ import java.util.List;
 
 public interface IProductServices {
 
-    List<Product> getProducts();
+    List<Product> getProductsService();
 
-    Product getProduct(int prodId);
+    Product getProductService(int prodId);
 
-    void createProduct(Product product);
+    void createProductService(Product product);
 
-    void updateProduct(Product product);
+    void updateProductService(Product product);
 
 }

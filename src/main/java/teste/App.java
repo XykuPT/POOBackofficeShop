@@ -1,18 +1,12 @@
 package teste;
 
-//import javafx.application.Application;
-//import javafx.scene.Parent;
-//import javafx.scene.Scene;
-//import javafx.stage.Stage;
-//import javafx.fxml.FXMLLoader;
-import Services.ProductServices;
-import db.Dao;
+
+import Controllers.ProductsController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 /**
  * Hello world!
  *
@@ -33,6 +27,9 @@ public class App extends Application
     {
         System.out.println( "Hello Xico estúpido!" );
         launch(args);
+
+        System.out.println(ProductsController.getProducts());
+
         //ProductServices.createProduct();
         //ProductServices.updateProduct();
         //Dao.getCollection();

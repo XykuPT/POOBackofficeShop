@@ -12,29 +12,30 @@ import java.util.List;
 
 public class ProductServices implements IProductServices {
 
-    private ProductServices instance = new ProductServices();
-    public ProductServices getInstance(){ return this.instance;}
+    public static ProductServices getInstance(){ return new ProductServices();}
 
     @Override
-    public static List<Product> getProducts() {
+    public List<Product> getProductsService() {
         List<Product> products = (List<Product>) Dao.getCollection("products");
         return products;
     }
 
     @Override
-    public Product getProduct(int prodId) {
-        return null;
+    public Product getProductService(int prodId) {
+
+        Product product = (Product) Dao.getDocument(prodId, "products");
+        return product;
     }
 
     @Override
-    public void createProduct(Product product){
+    public void createProductService(Product product){
 
         Product newProduct = new Product(103, "camisa", "30€", 5,"shirts", Arrays.asList("azul", "branco"));
-        Dao.insertDocument(newProduct);
+        Dao.insertDocument(newProduct, "products");
     }
 
     @Override
-    public void updateProduct(Product product){
+    public void updateProductService(Product product){
 
         Product newProduct = new Product(103, "camisa verde", "30€", 5,"shirts", Arrays.asList("azul", "branco"));
         Dao.updateDocument(newProduct);

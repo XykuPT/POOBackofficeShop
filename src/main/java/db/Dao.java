@@ -53,19 +53,65 @@ public class Dao {
             return null;
         }
     }
-    
-    
-    public void insertDocument(Object input){
+
+    public static Object getDocument(int id, String type) {
         CodecRegistry pojoCodecRegistry = fromRegistries(MongoClientSettings.getDefaultCodecRegistry(),
                 fromProviders(PojoCodecProvider.builder().automatic(true).build()));
-        MongoCollection<Product> collection = database.getCollection("products", Product.class).withCodecRegistry(pojoCodecRegistry);
-        collection.insertOne((Product) input);
+
+        if(type == "products"){
+            MongoCollection<Product> collection = database.getCollection("products", Product.class).withCodecRegistry(pojoCodecRegistry);
+            Product output = collection.find(eq("prodId", id)).first();
+
+            return output;
+        }else if(type == "sales"){
+            MongoCollection<Sale> collection = database.getCollection("sales", Sale.class).withCodecRegistry(pojoCodecRegistry);
+            Sale output = collection.find(eq("saleId", id)).first();
+            return output;
+
+        }else {
+            return null;
+        }
+    }
+    
+    
+    public static void insertDocument(Object input, String type){
+        if(type == "products") {
+            CodecRegistry pojoCodecRegistry = fromRegistries(MongoClientSettings.getDefaultCodecRegistry(),
+                    fromProviders(PojoCodecProvider.builder().automatic(true).build()));
+            MongoCollection<Product> collection = database.getCollection(type, Product.class).withCodecRegistry(pojoCodecRegistry);
+            collection.insertOne((Product) input);
+        }else if(type == "sales"){
+            CodecRegistry pojoCodecRegistry = fromRegistries(MongoClientSettings.getDefaultCodecRegistry(),
+                    fromProviders(PojoCodecProvider.builder().automatic(true).build()));
+            MongoCollection<Sale> collection = database.getCollection(type, Sale.class).withCodecRegistry(pojoCodecRegistry);
+            collection.insertOne((Sale) input);
+        }
     }
 
-    public void updateDocument(Product product){
+//    public static void updateDocument(Object input, String type) {
+//        if (type == "products") {
+//            CodecRegistry pojoCodecRegistry = fromRegistries(MongoClientSettings.getDefaultCodecRegistry(),
+//                    fromProviders(PojoCodecProvider.builder().automatic(true).build()));
+//            MongoCollection<Product> collection = database.getCollection(type, Product.class).withCodecRegistry(pojoCodecRegistry);
+//            collection.replaceOne(eq("prodId", input.getProdId()), input);
+//        } else if (type == "sales") {
+//            CodecRegistry pojoCodecRegistry = fromRegistries(MongoClientSettings.getDefaultCodecRegistry(),
+//                    fromProviders(PojoCodecProvider.builder().automatic(true).build()));
+//            MongoCollection<Sale> collection = database.getCollection(type, Sale.class).withCodecRegistry(pojoCodecRegistry);
+//            collection.replaceOne(eq("saleId", input.getSaleId()), input);
+//        }
+//    }
+    public static void updateDocument(Product product) {
         CodecRegistry pojoCodecRegistry = fromRegistries(MongoClientSettings.getDefaultCodecRegistry(),
                 fromProviders(PojoCodecProvider.builder().automatic(true).build()));
         MongoCollection<Product> collection = database.getCollection("products", Product.class).withCodecRegistry(pojoCodecRegistry);
-        collection.replaceOne(eq("prodId", product.getProdId()),product);
+        collection.replaceOne(eq("prodId", product.getProdId()), product);
+    }
+
+    public static void updateDocument(Sale sale) {
+        CodecRegistry pojoCodecRegistry = fromRegistries(MongoClientSettings.getDefaultCodecRegistry(),
+                fromProviders(PojoCodecProvider.builder().automatic(true).build()));
+        MongoCollection<Sale> collection = database.getCollection("sales", Sale.class).withCodecRegistry(pojoCodecRegistry);
+        collection.replaceOne(eq("saleId", Sale.getSaleId()), sale);
     }
 }
