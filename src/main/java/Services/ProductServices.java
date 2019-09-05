@@ -38,5 +38,5 @@ public class ProductServices implements IProductServices {
     public void updateProductService(Product product){
 
         Product newProduct = new Product(103, "camisa verde", "30€", 5,"shirts", Arrays.asList("azul", "branco"));
-        Dao.updateDocument(newProduct);
+        Dao.updateProduct(newProduct);
     }}

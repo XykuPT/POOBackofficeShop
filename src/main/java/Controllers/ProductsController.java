@@ -2,11 +2,40 @@ package Controllers;
 
 
 import Services.ProductServices;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import model.Product;
 
 import java.util.List;
 
 public class ProductsController {
+
+    private ObservableList<Product> products = FXCollections.observableArrayList();
+
+    @FXML
+    private TableView<Product> productsTV;
+    @FXML
+    private TableColumn<Product,Integer> prodId;
+    @FXML
+    private TableColumn<Product,String> name;
+
+
+    @FXML
+    private void initialize() {
+        prodId.setCellValueFactory(new PropertyValueFactory<Product, Integer>("prodId"));
+        name.setCellValueFactory(new PropertyValueFactory<Product, String>("name"));
+        products.addAll(ProductServices.getInstance().getProductsService());
+
+
+        productsTV.setItems(products);
+
+    }
+
+
 
     public static List<Product> getProducts() {
         try {

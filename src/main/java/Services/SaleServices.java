@@ -28,6 +28,7 @@ public class SaleServices implements ISaleServices {
 
     @Override
     public void updateSaleService(Sale sale) {
-
+        Sale newSale = new Sale(01, "sold", new int[]{101, 102},60, 2);
+        Dao.updateSale(newSale);
     }
 }

@@ -2,20 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61c14312-a796-4209-8879-82f0fc814746" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Services/SaleServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/SalesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ProductsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Interface/IProductServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interface/IProductServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Interface/ISaleServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interface/ISaleServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/ProductServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/ProductServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/SaleServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/SaleServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/db/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/Dao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Sale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Sale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/teste/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/teste/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/Controller.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Services/ProductServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/ProductServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/Dao$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/db/Dao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/Dao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Product.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/teste/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/teste/App.class" afterDir="false" />
     </list>
@@ -134,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567361486514</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="working everything">
+      <created>1567610374580</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1567610374580</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

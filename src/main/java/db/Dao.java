@@ -101,17 +101,17 @@ public class Dao {
 //            collection.replaceOne(eq("saleId", input.getSaleId()), input);
 //        }
 //    }
-    public static void updateDocument(Product product) {
+    public static void updateProduct(Product product) {
         CodecRegistry pojoCodecRegistry = fromRegistries(MongoClientSettings.getDefaultCodecRegistry(),
                 fromProviders(PojoCodecProvider.builder().automatic(true).build()));
         MongoCollection<Product> collection = database.getCollection("products", Product.class).withCodecRegistry(pojoCodecRegistry);
         collection.replaceOne(eq("prodId", product.getProdId()), product);
     }
 
-    public static void updateDocument(Sale sale) {
+    public static void updateSale(Sale sale) {
         CodecRegistry pojoCodecRegistry = fromRegistries(MongoClientSettings.getDefaultCodecRegistry(),
                 fromProviders(PojoCodecProvider.builder().automatic(true).build()));
         MongoCollection<Sale> collection = database.getCollection("sales", Sale.class).withCodecRegistry(pojoCodecRegistry);
-        collection.replaceOne(eq("saleId", Sale.getSaleId()), sale);
+        //collection.replaceOne(eq("saleId", Sale.getSaleId()), sale);
     }
 }

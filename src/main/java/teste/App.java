@@ -17,7 +17,9 @@ public class App extends Application
 {
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/sample.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/sample.fxml"));
+        loader.setController(new ProductsController());
+        Parent root = loader.load();
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
@@ -25,7 +27,7 @@ public class App extends Application
 
     public static void main( String[] args )
     {
-        System.out.println( "Hello Xico estúpido!" );
+        System.out.println( "Hello Xico!" );
         launch(args);
 
         System.out.println(ProductsController.getProducts());
