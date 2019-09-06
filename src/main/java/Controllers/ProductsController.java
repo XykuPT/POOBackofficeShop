@@ -22,12 +22,25 @@ public class ProductsController {
     private TableColumn<Product,Integer> prodId;
     @FXML
     private TableColumn<Product,String> name;
+    @FXML
+    private TableColumn<Product,String> price;
+    @FXML
+    private TableColumn<Product,Integer> qty;
+    @FXML
+    private TableColumn<Product,String> category;
+    @FXML
+    private TableColumn<Product,String[]> color;
 
 
     @FXML
     private void initialize() {
         prodId.setCellValueFactory(new PropertyValueFactory<Product, Integer>("prodId"));
         name.setCellValueFactory(new PropertyValueFactory<Product, String>("name"));
+        price.setCellValueFactory(new PropertyValueFactory<Product, String>("price"));
+        qty.setCellValueFactory(new PropertyValueFactory<Product, Integer>("qty"));
+        category.setCellValueFactory(new PropertyValueFactory<Product, String>("category"));
+        color.setCellValueFactory(new PropertyValueFactory<Product, String[]>("color"));
+
         products.addAll(ProductServices.getInstance().getProductsService());
 
 

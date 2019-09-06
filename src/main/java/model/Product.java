@@ -2,6 +2,9 @@ package model;
 
 import java.util.List;
 
+/**
+ * Esta classe representa um produto
+ */
 public class Product {
     private int prodId;
     private String name;

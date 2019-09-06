@@ -73,11 +73,11 @@
                                  <columns>
                                     <TableColumn fx:id="prodId" prefWidth="75.0" text="prodId" />
                                     <TableColumn fx:id="name" prefWidth="75.0" text="Name" />
-                                    <TableColumn prefWidth="75.0" text="Price" />
-                                    <TableColumn prefWidth="75.0" text="Quantity" />
-                                    <TableColumn prefWidth="75.0" text="Category" />
-                                    <TableColumn prefWidth="75.0" text="Color" />
-                                    <TableColumn prefWidth="75.0" text="Update" />
+                                    <TableColumn fx:id="price" prefWidth="75.0" text="Price" />
+                                    <TableColumn fx:id="qty" prefWidth="75.0" text="Quantity" />
+                                    <TableColumn fx:id="category" prefWidth="75.0" text="Category" />
+                                    <TableColumn fx:id="color" prefWidth="75.0" text="Color" />
+                                    <TableColumn  prefWidth="75.0" text="Update" />
                                     <TableColumn prefWidth="75.0" text="Delete" />
                                  </columns>
                               </TableView>
@@ -85,10 +85,11 @@
                         </AnchorPane>
                   </content>
                 </Tab>
-                <Tab text="Sales">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                  </content>
+                <Tab text="Sales" >
+                    <fx:include source="sales.fxml" />
+<!--                  <content>-->
+<!--                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />-->
+<!--                  </content>-->
                 </Tab>
               </tabs>
             </TabPane>
