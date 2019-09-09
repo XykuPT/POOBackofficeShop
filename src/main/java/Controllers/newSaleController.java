@@ -56,6 +56,9 @@ public class newSaleController {
 
     @FXML
     private void initialize() {
+
+
+
         addressInput.setDisable(true);
         locationInput.setDisable(true);
 
