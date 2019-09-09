@@ -33,8 +33,8 @@ public class ProductServices implements IProductServices {
     @Override
     public void createProductService(Product product){
 
-        Product newProduct = new Product(103, "camisa", "30€", 5,"shirts", Arrays.asList("azul", "branco"));
-        Dao.insertDocument(newProduct, "products");
+
+        Dao.insertDocument(product, "products");
     }
 
     @Override

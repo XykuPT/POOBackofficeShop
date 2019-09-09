@@ -7,24 +7,32 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
-<AnchorPane fx:id="salesPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.newSaleController">
-    <Button mnemonicParsing="false" onAction="#back" prefHeight="27.0" prefWidth="65.0" text="Back" />
-   <RadioButton fx:id="sale" layoutX="33.0" layoutY="57.0" mnemonicParsing="false" onAction="#radioChange" selected="true" text="Sale">
-      <toggleGroup>
-         <ToggleGroup fx:id="saleType" />
-      </toggleGroup>
-   </RadioButton>
-   <RadioButton fx:id="order" layoutX="165.0" layoutY="57.0" mnemonicParsing="false" onAction="#radioChange" text="Order" toggleGroup="$saleType" />
-   <ComboBox fx:id="productsList" layoutX="41.0" layoutY="117.0" prefWidth="150.0" />
-   <TextField layoutX="239.0" layoutY="117.0" />
-   <Label layoutX="41.0" layoutY="100.0" text="Products" />
-   <Label layoutX="239.0" layoutY="100.0" text="Quantity" />
-   <TextField disable="true" editable="false" layoutX="421.0" layoutY="117.0" />
-   <Label layoutX="421.0" layoutY="100.0" text="Total" />
-   <TextField fx:id="addressInput" disable="true" layoutX="42.0" layoutY="200.0" prefHeight="25.0" prefWidth="349.0" />
-   <Label layoutX="41.0" layoutY="183.0" text="Address" />
-   <TextField fx:id="locationInput" disable="true" layoutX="42.0" layoutY="258.0" />
-   <Label layoutX="43.0" layoutY="241.0" text="Location" />
-   <Button layoutX="470.0" layoutY="258.0" mnemonicParsing="false" onAction="#SubmitNewSale" text="Submit" />
+<AnchorPane fx:id="salesPane" snapToPixel="false" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.newSaleController">
+   <Pane prefHeight="500.0" prefWidth="1000.0">
+      <children>
+          <Button layoutY="1.0" mnemonicParsing="false" onAction="#back" prefHeight="27.0" prefWidth="65.0" text="Back" />
+         <RadioButton fx:id="sale" layoutX="53.0" layoutY="74.0" mnemonicParsing="false" onAction="#radioChange" selected="true" text="Sale">
+            <toggleGroup>
+               <ToggleGroup fx:id="saleType" />
+            </toggleGroup>
+         </RadioButton>
+         <RadioButton fx:id="order" layoutX="131.0" layoutY="74.0" mnemonicParsing="false" onAction="#radioChange" text="Order" toggleGroup="$saleType" />
+         <ComboBox fx:id="productsList" layoutX="21.0" layoutY="128.0" prefWidth="150.0" promptText="Choose Product" />
+         <TextField fx:id="quantity" layoutX="195.0" layoutY="128.0" />
+         <Label layoutX="22.0" layoutY="111.0" text="Products" />
+         <Label layoutX="195.0" layoutY="111.0" text="Quantity" />
+         <TextField fx:id="TotalPrice" disable="true" layoutX="386.0" layoutY="128.0" />
+         <Label layoutX="386.0" layoutY="111.0" text="Total" />
+         <TextField fx:id="addressInput" disable="true" layoutX="24.0" layoutY="231.0" prefHeight="25.0" prefWidth="349.0" />
+         <Label layoutX="24.0" layoutY="214.0" text="Address" />
+         <TextField fx:id="locationInput" disable="true" layoutX="22.0" layoutY="281.0" />
+         <Label layoutX="22.0" layoutY="264.0" text="Location" />
+         <Button layoutX="452.0" layoutY="313.0" mnemonicParsing="false" onAction="#SubmitNewSale" text="Submit" />
+         <Label layoutX="531.0" layoutY="132.0" text="€" />
+         <TextField fx:id="MaxQuantity" disable="true" layoutX="21.0" layoutY="179.0" />
+         <Label layoutX="24.0" layoutY="162.0" text="Max Quantity" />
+      </children>
+   </Pane>
 </AnchorPane>

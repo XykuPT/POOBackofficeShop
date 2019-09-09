@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61c14312-a796-4209-8879-82f0fc814746" name="Default Changelist" comment="newS">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/newSaleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Views/newSale.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Views/sales.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="61c14312-a796-4209-8879-82f0fc814746" name="Default Changelist" comment="newSale">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ProductsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SalesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SalesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/newSaleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/newSaleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Interface/ISaleServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interface/ISaleServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/ProductServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/ProductServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/SaleServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/SaleServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Views/newSale.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/newSale.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/db/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/Dao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Sale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Sale.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/teste/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/teste/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Services/ProductServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/ProductServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/Dao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/Dao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/teste/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/teste/App.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -148,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567698194327</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="newSale">
+      <created>1567795060680</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1567795060680</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -177,6 +185,33 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="working everything" />
     <MESSAGE value="fxml + controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="fxml + controller" />
+    <MESSAGE value="newSale" />
+    <option name="LAST_COMMIT_MESSAGE" value="newSale" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Controllers/newSaleController.java</url>
+          <line>124</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/db/Dao.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/db/Dao.java</url>
+          <line>114</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/db/Dao.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

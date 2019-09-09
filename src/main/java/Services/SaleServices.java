@@ -2,11 +2,16 @@ package Services;
 
 import Interface.ISaleServices;
 import db.Dao;
+import model.Order;
 import model.Sale;
+import org.bson.Document;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class SaleServices implements ISaleServices {
+    public static SaleServices getInstance(){ return new SaleServices();}
+
     @Override
     public List<Sale> getSalessService() {
         List<Sale> sales = (List<Sale>) Dao.getCollection("sales");
@@ -22,13 +27,16 @@ public class SaleServices implements ISaleServices {
     @Override
     public void createSaleService(Sale sale) {
 
-        Sale newSale = new Sale(01, "sold", new int[]{101, 102},60, 2);
-        Dao.insertDocument(newSale, "sales" );
+        Dao.insertSale(sale);
     }
+    @Override
+    public void createSaleService(Order sale) {
 
+        Dao.insertSale(sale);
+    }
     @Override
     public void updateSaleService(Sale sale) {
-        Sale newSale = new Sale(01, "sold", new int[]{101, 102},60, 2);
+        Sale newSale = new Sale(01, "sold",60, 2, Arrays.asList("101", "102"));
         Dao.updateSale(newSale);
     }
 }

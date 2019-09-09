@@ -1,13 +1,14 @@
 package model;
 
+
 import java.util.List;
 
-public class Order extends Sale {
+public class Order extends Sale{
     private String Address;
     private String Location;
 
-    public Order(int saleId, String status, int[] product, int total, int totalqty, String address, String location) {
-        super(saleId, status, product, total, totalqty);
+    public Order(int saleId, String status, int total, int quantityTotal, List<String> product, String address, String location) {
+        super(saleId, status, total, quantityTotal, product);
         Address = address;
         Location = location;
     }

@@ -2,11 +2,19 @@ package teste;
 
 
 import Controllers.ProductsController;
+import Services.ProductServices;
+import Services.SaleServices;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import model.Order;
+import model.Product;
+import model.Sale;
+
+import java.util.Arrays;
+
 /**
  * Hello world!
  *
@@ -31,8 +39,14 @@ public class App extends Application
         launch(args);
 
         System.out.println(ProductsController.getProducts());
+        System.out.println(SaleServices.getInstance().getSalessService());
+        //Product newProduct = new Product(111, "camisa", "30€", 20,"shirts", Arrays.asList("azul", "branco"));
+        //ProductsController.createProduct(newProduct);
 
-        //ProductServices.createProduct();
+//      Sale newSale = new Sale(01, "sold", Arrays.asList("101", "102"),60, 2);
+//      SaleServices.getInstance().createSaleService(newSale);
+//        Order newSale = new Order(01, "sold", new int[]{101, 102},60, 2,"teste","Teste");
+//        SaleServices.getInstance().createSaleService(newSale);
         //ProductServices.updateProduct();
         //Dao.getCollection();
     }

@@ -1,10 +1,14 @@
 package model;
 
+import javafx.beans.property.ObjectProperty;
+import org.bson.codecs.pojo.annotations.BsonDiscriminator;
+
 import java.util.List;
 
 /**
  * Esta classe representa um produto
  */
+
 public class Product {
     private int prodId;
     private String name;
