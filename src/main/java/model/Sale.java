@@ -1,10 +1,5 @@
 package model;
 
-
-import org.bson.codecs.pojo.annotations.BsonDiscriminator;
-import org.bson.codecs.pojo.annotations.BsonProperty;
-
-import java.util.Arrays;
 import java.util.List;
 
 public class Sale {
@@ -18,7 +13,7 @@ public class Sale {
 
     }
 
-    public Sale( int saleId, String status, int total, int quantityTotal, List<String> product) {
+    public Sale( int saleId, String status, List<String> product, int total, int quantityTotal) {
         this.saleId = saleId;
         this.status = status;
         this.total = total;

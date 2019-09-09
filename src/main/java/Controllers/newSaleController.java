@@ -119,11 +119,13 @@ public class newSaleController {
     }
 
     @FXML
-    void SubmitNewSale(ActionEvent event) {
+    void SubmitNewSale(ActionEvent event) throws IOException {
         Random rand = new Random();
         if(sale.isSelected()) {
-            Sale newSale = new Sale(rand.nextInt(1000), "New Sale", Integer.parseInt(TotalPrice.getText()), Integer.parseInt(quantity.getText()), Arrays.asList(String.valueOf(chosenProduct.getProdId())) );
+            Sale newSale = new Sale(rand.nextInt(1000), "New Sale", Arrays.asList(String.valueOf(chosenProduct.getProdId())), Integer.parseInt(TotalPrice.getText()), Integer.parseInt(quantity.getText()) );
             SaleServices.getInstance().createSaleService(newSale);
+            AnchorPane sales = FXMLLoader.load(getClass().getResource("/sales.fxml"));
+            salesPane.getChildren().setAll(sales);
         }
     }
 }

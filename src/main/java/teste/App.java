@@ -9,10 +9,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import model.Order;
-import model.Product;
-import model.Sale;
-
 import java.util.Arrays;
 
 /**

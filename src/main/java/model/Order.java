@@ -1,14 +1,13 @@
 package model;
 
-
 import java.util.List;
 
-public class Order extends Sale{
+public class Order extends Sale {
     private String Address;
     private String Location;
 
-    public Order(int saleId, String status, int total, int quantityTotal, List<String> product, String address, String location) {
-        super(saleId, status, total, quantityTotal, product);
+    public Order(int saleId, String status, List<String> product, int total, int quantityTotal, String address, String location) {
+        super(saleId, status, product, total, quantityTotal);
         Address = address;
         Location = location;
     }
@@ -27,5 +26,13 @@ public class Order extends Sale{
 
     public void setLocation(String location) {
         Location = location;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "Address='" + Address + '\'' +
+                ", Location='" + Location + '\'' +
+                '}';
     }
 }
