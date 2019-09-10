@@ -31,7 +31,7 @@ public class App extends Application
 
     public static void main( String[] args )
     {
-        System.out.println( "Hello Xico!" );
+        //System.out.println( "Hello Xico!" );
         launch(args);
 
         System.out.println(ProductsController.getProducts());
