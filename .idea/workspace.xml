@@ -5,8 +5,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SalesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SalesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/newSaleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/newSaleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Interface/ISaleServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interface/ISaleServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/SaleServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/SaleServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Views/sales.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Views/sales.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/db/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/Dao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Sale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Sale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/teste/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/teste/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/Dao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/Dao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/teste/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/teste/App.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568051415316</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="newSale">
+      <created>1568054971865</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1568054971866</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -196,22 +210,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Controllers/newSaleController.java</url>
-          <line>127</line>
+          <line>145</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/db/Dao.java</url>
-          <line>95</line>
+          <line>116</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/db/Dao.java</url>
-          <line>114</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/db/Dao.java</url>
-          <line>56</line>
+          <line>67</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>

@@ -13,6 +13,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Callback;
 import javafx.util.StringConverter;
+import model.Order;
 import model.Product;
 import model.Sale;
 
@@ -21,6 +22,9 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Random;
 
+/**
+ * new Sale view Controller
+ */
 public class newSaleController {
     @FXML
     private AnchorPane salesPane;
@@ -104,12 +108,21 @@ public class newSaleController {
         });
     }
 
+
+    /**
+     * @param event button click
+     * @throws IOException
+     * Goes back to the last page
+     */
     @FXML
     void back(ActionEvent event) throws IOException {
         AnchorPane sales = FXMLLoader.load(getClass().getResource("/sales.fxml"));
         salesPane.getChildren().setAll(sales);
     }
 
+    /**
+     * @param event change radio button
+     */
     @FXML
     void radioChange(ActionEvent event){
         if(sale.isSelected()){
@@ -121,11 +134,21 @@ public class newSaleController {
         }
     }
 
+    /**
+     * @param event button click event
+     * @throws IOException
+     * Submits a new sale or a new order
+     */
     @FXML
     void SubmitNewSale(ActionEvent event) throws IOException {
         Random rand = new Random();
         if(sale.isSelected()) {
-            Sale newSale = new Sale(rand.nextInt(1000), "New Sale", Arrays.asList(String.valueOf(chosenProduct.getProdId())), Integer.parseInt(TotalPrice.getText()), Integer.parseInt(quantity.getText()) );
+            Sale newSale = new Sale("sale",rand.nextInt(1000), "New Sale", Arrays.asList(String.valueOf(chosenProduct.getProdId())), Integer.parseInt(TotalPrice.getText()), Integer.parseInt(quantity.getText()) );
+            SaleServices.getInstance().createSaleService(newSale);
+            AnchorPane sales = FXMLLoader.load(getClass().getResource("/sales.fxml"));
+            salesPane.getChildren().setAll(sales);
+        }else{
+            Order newSale = new Order("order",rand.nextInt(1000), "New Sale", Arrays.asList(String.valueOf(chosenProduct.getProdId())), Integer.parseInt(TotalPrice.getText()), Integer.parseInt(quantity.getText()), addressInput.getText(), locationInput.getText() );
             SaleServices.getInstance().createSaleService(newSale);
             AnchorPane sales = FXMLLoader.load(getClass().getResource("/sales.fxml"));
             salesPane.getChildren().setAll(sales);

@@ -13,9 +13,14 @@ public class SaleServices implements ISaleServices {
     public static SaleServices getInstance(){ return new SaleServices();}
 
     @Override
-    public List<Sale> getSalessService() {
+    public List<Sale> getSalesService() {
         List<Sale> sales = (List<Sale>) Dao.getCollection("sales");
         return sales;
+    }
+    @Override
+    public List<Order> getOrdersService() {
+        List<Order> orders = (List<Order>) Dao.getCollection("orders");
+        return orders;
     }
 
     @Override
@@ -36,7 +41,7 @@ public class SaleServices implements ISaleServices {
     }
     @Override
     public void updateSaleService(Sale sale) {
-        Sale newSale = new Sale(01, "sold", Arrays.asList("101", "102"),60, 2);
+        Sale newSale = new Sale("sale",01, "sold", Arrays.asList("101", "102"),60, 2);
         Dao.updateSale(newSale);
     }
 }

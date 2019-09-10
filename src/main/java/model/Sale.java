@@ -3,6 +3,7 @@ package model;
 import java.util.List;
 
 public class Sale {
+    private String type;
     private int saleId;
     private String status;
     private List<String> product;
@@ -13,7 +14,8 @@ public class Sale {
 
     }
 
-    public Sale( int saleId, String status, List<String> product, int total, int quantityTotal) {
+    public Sale(String type, int saleId, String status, List<String> product, int total, int quantityTotal) {
+        this.type = type;
         this.saleId = saleId;
         this.status = status;
         this.total = total;
@@ -21,6 +23,8 @@ public class Sale {
         this.product = product;
     }
 
+    public String getType(){return type;}
+    public void setType(String type){this.type = type;}
     public int getSaleId() {
         return saleId;
     }

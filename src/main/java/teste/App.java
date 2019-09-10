@@ -35,7 +35,7 @@ public class App extends Application
         launch(args);
 
         System.out.println(ProductsController.getProducts());
-        System.out.println(SaleServices.getInstance().getSalessService());
+        System.out.println(SaleServices.getInstance().getSalesService());
         //Product newProduct = new Product(111, "camisa", "30€", 20,"shirts", Arrays.asList("azul", "branco"));
         //ProductsController.createProduct(newProduct);
 

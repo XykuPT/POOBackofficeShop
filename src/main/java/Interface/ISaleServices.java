@@ -7,7 +7,8 @@ import java.util.List;
 
 public interface ISaleServices {
 
-    List<Sale> getSalessService();
+    List<Sale> getSalesService();
+    List<Order> getOrdersService();
 
     Sale getSaleService(int saleId);
 

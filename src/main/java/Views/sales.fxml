@@ -10,7 +10,7 @@
       <Button mnemonicParsing="false" onAction="#newSale" prefHeight="27.0" prefWidth="65.0" text="New Sale" />
       <TableView fx:id="salesTV"  layoutY="27.0" prefHeight="374.0" prefWidth="600.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Sale Type" />
+          <TableColumn fx:id="type" prefWidth="75.0" text="Sale Type" />
           <TableColumn fx:id="saleId" prefWidth="75.0" text="Sale ID" />
             <TableColumn fx:id="status" prefWidth="75.0" text="Status" />
             <TableColumn fx:id="product" prefWidth="75.0" text="Products" />

@@ -22,8 +22,15 @@ import static com.mongodb.client.model.Filters.eq;
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 
+/**
+ * Database connection and CRUD methods
+ */
 public class Dao {
     static MongoDatabase database;
+
+    /**
+     * Database connection
+     */
     static {
 
         String mongoConnectionLink = "mongodb+srv://FrancSerra:Fserra01@projectoweb-nxojt.gcp.mongodb.net/test?retryWrites=true&w=majority";
@@ -38,6 +45,10 @@ public class Dao {
 
     }
 
+    /**
+     * @param type string to filter if it is going to get Products or Sales from data base
+     * @return list of Products or Sales
+     */
      public static List<?> getCollection(String type) {
 //        CodecRegistry pojoCodecRegistry = fromRegistries(MongoClientSettings.getDefaultCodecRegistry(),
 //                fromProviders(PojoCodecProvider.builder().automatic(true).build()));
@@ -63,6 +74,11 @@ public class Dao {
         }
     }
 
+    /**
+     * @param id Product or Sale ID
+     * @param type string to filter if it is going to get Products or Sales from data base
+     * @return A single Product or Sale
+     */
     public static Object getDocument(int id, String type) {
 
 
@@ -85,8 +101,13 @@ public class Dao {
             return null;
         }
     }
-    
-    
+
+
+    /**
+     * @param input Product or a Sale
+     * @param type string to filter if it is going to get Products or Sales from data base
+     *             Inserts a Product or a sale into data base
+     */
     public static void insertDocument(Object input, String type){
 
 
@@ -102,6 +123,11 @@ public class Dao {
             collection.insertOne((Sale) input);
         }
     }
+
+    /**
+     * @param sale new sale
+     *             Inserts a new Sale into data base
+     */
     public static void insertSale(Sale sale) {
 //        ClassModel<Sale> saleModel = ClassModel.builder(Sale.class).enableDiscriminator(true).build();
 //        CodecRegistry pojoCodecRegistry = fromRegistries(MongoClientSettings.getDefaultCodecRegistry(),
@@ -110,11 +136,14 @@ public class Dao {
         collection.insertOne(sale);
 
     }
+
+    /**
+     * @param sale new order
+     *             Inserts a new Order into data base
+     */
     public static void insertSale(Order sale) {
 
-        CodecRegistry pojoCodecRegistry = fromRegistries(MongoClientSettings.getDefaultCodecRegistry(),
-                fromProviders(PojoCodecProvider.builder().automatic(true).build()));
-        MongoCollection<Order> collection = database.getCollection("order", Order.class).withCodecRegistry(pojoCodecRegistry);
+        MongoCollection<Order> collection = database.getCollection("order", Order.class);
         collection.insertOne(sale);
 
     }
