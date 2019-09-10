@@ -2,6 +2,9 @@ package model;
 
 import java.util.List;
 
+/**
+ * Esta classe representa uma Venda
+ */
 public class Sale {
     private String type;
     private int saleId;

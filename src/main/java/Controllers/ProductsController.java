@@ -32,6 +32,9 @@ public class ProductsController {
     private TableColumn<Product,String[]> color;
 
 
+    /**
+     * Load list of Products and bind data to TableView
+     */
     @FXML
     private void initialize() {
         prodId.setCellValueFactory(new PropertyValueFactory<Product, Integer>("prodId"));
@@ -49,7 +52,9 @@ public class ProductsController {
     }
 
 
-
+    /**
+     * @return List of Products
+     */
     public static List<Product> getProducts() {
         try {
             List<Product> output = ProductServices.getInstance().getProductsService();
@@ -59,6 +64,10 @@ public class ProductsController {
         }
     }
 
+    /**
+     * @param prodId Product ID
+     * @return a Single Product from data base with the ID of input
+     */
     public static Product getProduct(int prodId){
         try {
             Product output = ProductServices.getInstance().getProductService(prodId);
@@ -69,6 +78,9 @@ public class ProductsController {
         }
     }
 
+    /**
+     * @param product New Product to add to Database
+     */
     public static void createProduct(Product product){
         try{
             ProductServices.getInstance().createProductService(product);
@@ -78,6 +90,9 @@ public class ProductsController {
         }
     }
 
+    /**
+     * @param product Product to be updated
+     */
     public static void updateProduct(Product product){
         try{
             ProductServices.getInstance().updateProductService(product);

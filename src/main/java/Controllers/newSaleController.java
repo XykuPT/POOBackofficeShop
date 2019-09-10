@@ -58,6 +58,9 @@ public class newSaleController {
     private ObservableList<Product> products = FXCollections.observableArrayList();
     private Product chosenProduct = new Product();
 
+    /**
+     * After page load bind list of Products do comboBox, and add event listners to changes
+     */
     @FXML
     private void initialize() {
 

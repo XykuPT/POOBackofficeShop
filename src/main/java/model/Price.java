@@ -1,5 +1,8 @@
 package model;
 
+/**
+ * Price Model
+ */
 public class Price {
     private int value;
 

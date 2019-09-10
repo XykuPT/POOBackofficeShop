@@ -10,16 +10,26 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Classe de Serviços de produtos que liga os controladores das views à base de dados
+ */
 public class ProductServices implements IProductServices {
 
     public static ProductServices getInstance(){ return new ProductServices();}
 
+    /**
+     * @return Serviço que retorna da base de dados a lIstagem de produtos
+     */
     @Override
     public List<Product> getProductsService() {
         List<Product> products = (List<Product>) Dao.getCollection("products");
         return products;
     }
 
+    /**
+     * @param prodId Id de Produto
+     * @return Serviço retorna um produto com base no Id inserido
+     */
     @Override
     public Product getProductService(int prodId) {
 
@@ -28,7 +38,7 @@ public class ProductServices implements IProductServices {
     }
 
     /**
-     * @param product
+     * @param product Produto a ser inserido na base de dados
      */
     @Override
     public void createProductService(Product product){
@@ -37,6 +47,9 @@ public class ProductServices implements IProductServices {
         Dao.insertDocument(product, "products");
     }
 
+    /**
+     * @param product Produto a ser atualizado na base de dados
+     */
     @Override
     public void updateProductService(Product product){
 

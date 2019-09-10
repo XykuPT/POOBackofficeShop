@@ -2,6 +2,9 @@ package model;
 
 import java.util.List;
 
+/**
+ * Order Model
+ */
 public class Order extends Sale {
     private String Address;
     private String Location;
