@@ -23,7 +23,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 /**
- * new Sale view Controller
+ * newSale view Controller
  */
 public class newSaleController {
     @FXML

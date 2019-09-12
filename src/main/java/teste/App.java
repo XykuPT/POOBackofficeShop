@@ -25,7 +25,7 @@ public class App extends Application
         loader.setController(new ProductsController());
         Parent root = loader.load();
         primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 640, 375));
+        primaryStage.setScene(new Scene(root, 640, 500));
         primaryStage.show();
     }
 

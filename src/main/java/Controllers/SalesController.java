@@ -5,11 +5,17 @@ import Services.SaleServices;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import model.Order;
 import model.Product;
 import model.Sale;
@@ -61,6 +67,25 @@ public class SalesController {
         //orders.addAll(SaleServices.getInstance().getOrdersService());
         salesTV.setItems(sales);
         //salesTV.setItems(orders);
+
+        salesTV.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/saleDetails.fxml"));
+
+                loader.setController(new saleDetailsController());
+                saleDetailsController controller = loader.getController();
+
+                controller.setData(salesTV.getSelectionModel().getSelectedItem().getSaleId());
+
+                try {
+                    AnchorPane saleDetails = loader.load();
+                    salesPane.getChildren().setAll(saleDetails);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
     /**

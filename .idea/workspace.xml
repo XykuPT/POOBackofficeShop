@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61c14312-a796-4209-8879-82f0fc814746" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/saleDetailsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Interface/IProductServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interface/IProductServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Interface/ISaleServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Interface/ISaleServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SalesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SalesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/newSaleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/newSaleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/teste/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/teste/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/ProductServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/ProductServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/Dao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/Dao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Price.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Price.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/teste/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/teste/App.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -226,14 +232,9 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/db/Dao.java</url>
-          <line>116</line>
+          <url>file://$PROJECT_DIR$/src/main/java/Controllers/saleDetailsController.java</url>
+          <line>56</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/db/Dao.java</url>
-          <line>67</line>
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
