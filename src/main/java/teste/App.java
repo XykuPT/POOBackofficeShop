@@ -9,6 +9,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 import java.util.Arrays;
 
 /**
@@ -36,6 +38,7 @@ public class App extends Application
 
         System.out.println(ProductsController.getProducts());
         System.out.println(SaleServices.getInstance().getSalesService());
+        System.out.println(SaleServices.getInstance().getOrdersService());
         //Product newProduct = new Product(111, "camisa", "30€", 20,"shirts", Arrays.asList("azul", "branco"));
         //ProductsController.createProduct(newProduct);
 
@@ -45,6 +48,8 @@ public class App extends Application
 //        SaleServices.getInstance().createSaleService(newSale);
         //ProductServices.updateProduct();
         //Dao.getCollection();
+
+
     }
 }
 

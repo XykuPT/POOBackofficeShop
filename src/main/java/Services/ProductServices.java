@@ -57,6 +57,6 @@ public class ProductServices implements IProductServices {
     @Override
     public void updateProductService(Product product){
 
-        Product newProduct = new Product(103, "camisa verde", "30€", 5,"shirts", Arrays.asList("azul", "branco"));
-        Dao.updateProduct(newProduct);
+        //Product newProduct = new Product(103, "camisa verde", "30€", 5,"shirts", Arrays.asList("azul", "branco"));
+        Dao.updateProduct(product);
     }}

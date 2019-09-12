@@ -4,7 +4,9 @@ package Controllers;
 import Services.ProductServices;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -33,6 +35,9 @@ public class ProductsController {
     private TableColumn<Product,String> category;
     @FXML
     private TableColumn<Product,String[]> color;
+    @FXML
+    private Button updateList;
+
 
 
     /**
@@ -52,6 +57,14 @@ public class ProductsController {
 
         productsTV.setItems(products);
 
+    }
+
+    @FXML
+    void updateList(ActionEvent event) {
+
+        products.clear();
+        products.addAll(ProductServices.getInstance().getProductsService());
+        productsTV.setItems(products);
     }
 
 

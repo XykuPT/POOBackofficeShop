@@ -66,11 +66,16 @@ public class Dao {
 
             return output;
         }else if(type == "sales"){
-            MongoCollection<Sale> collection = database.getCollection("sales", Sale.class);//.withCodecRegistry(pojoCodecRegistry)
-            List<Sale> output = collection.find().into(new ArrayList<Sale>());
-            return output;
+             MongoCollection<Sale> collection = database.getCollection("sales", Sale.class);//.withCodecRegistry(pojoCodecRegistry)
+             List<Sale> output = collection.find().into(new ArrayList<Sale>());
+             return output;
 
-        }else {
+         }else if(type == "orders"){
+             MongoCollection<Sale> collection = database.getCollection("order", Sale.class);//.withCodecRegistry(pojoCodecRegistry)
+             List<Sale> output = collection.find().into(new ArrayList<Sale>());
+             return output;
+
+         }else {
             return null;
         }
     }

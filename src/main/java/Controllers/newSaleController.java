@@ -150,11 +150,23 @@ public class newSaleController {
         if(sale.isSelected()) {
             Sale newSale = new Sale("sale",rand.nextInt(1000), "New Sale", Arrays.asList(String.valueOf(chosenProduct.getProdId())), Integer.parseInt(TotalPrice.getText()), Integer.parseInt(quantity.getText()) );
             SaleServices.getInstance().createSaleService(newSale);
+
+            //TODO: for chosenProduct.getProdId() inserted in sale
+            Product updatedProduct = ProductServices.getInstance().getProductService(chosenProduct.getProdId());
+            updatedProduct.setQty(updatedProduct.getQty() - Integer.parseInt(quantity.getText()));
+            ProductServices.getInstance().updateProductService(updatedProduct);
+
             AnchorPane sales = FXMLLoader.load(getClass().getResource("/sales.fxml"));
             salesPane.getChildren().setAll(sales);
         }else{
             Order newSale = new Order("order",rand.nextInt(1000), "New Sale", Arrays.asList(String.valueOf(chosenProduct.getProdId())), Integer.parseInt(TotalPrice.getText()), Integer.parseInt(quantity.getText()), addressInput.getText(), locationInput.getText() );
             SaleServices.getInstance().createSaleService(newSale);
+
+            //TODO: for chosenProduct.getProdId() inserted in sale
+            Product updatedProduct = ProductServices.getInstance().getProductService(chosenProduct.getProdId());
+            updatedProduct.setQty(updatedProduct.getQty() - Integer.parseInt(quantity.getText()));
+            ProductServices.getInstance().updateProductService(updatedProduct);
+
             AnchorPane sales = FXMLLoader.load(getClass().getResource("/sales.fxml"));
             salesPane.getChildren().setAll(sales);
         }

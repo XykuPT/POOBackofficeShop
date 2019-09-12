@@ -77,15 +77,16 @@
                                     <TableColumn fx:id="qty" prefWidth="75.0" text="Quantity" />
                                     <TableColumn fx:id="category" prefWidth="75.0" text="Category" />
                                     <TableColumn fx:id="color" prefWidth="75.0" text="Color" />
-                                    <TableColumn  prefWidth="75.0" text="Update" />
+                                    <TableColumn prefWidth="75.0" text="Update" />
                                     <TableColumn prefWidth="75.0" text="Delete" />
                                  </columns>
                               </TableView>
+                              <Button fx:id="updateList" layoutX="539.0" mnemonicParsing="false" onAction="#updateList" text="Update Table" />
                            </children>
                         </AnchorPane>
                   </content>
                 </Tab>
-                <Tab text="Sales" >
+                <Tab text="Sales">
                     <fx:include source="sales.fxml" />
 <!--                  <content>-->
 <!--                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />-->

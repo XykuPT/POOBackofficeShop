@@ -51,6 +51,12 @@ public class saleDetailsController {
     private TableColumn<Product,String> name;
     @FXML
     private TableColumn<Product,String> price;
+    @FXML
+    private TableColumn<Product,Integer> qty;
+    @FXML
+    private TableColumn<Product,String> category;
+    @FXML
+    private TableColumn<Product,String[]> color;
 
     /**
      * Método inicialização da pagina recebe o ID da venda da pagina anterior e vai a base de dados buscar todos os detalhes da venda e apresenta nos textfield's
@@ -73,6 +79,9 @@ public class saleDetailsController {
         prodId.setCellValueFactory(new PropertyValueFactory<Product, Integer>("prodId"));
         name.setCellValueFactory(new PropertyValueFactory<Product, String>("name"));
         price.setCellValueFactory(new PropertyValueFactory<Product, String>("price"));
+        qty.setCellValueFactory(new PropertyValueFactory<Product, Integer>("qty"));
+        category.setCellValueFactory(new PropertyValueFactory<Product, String>("category"));
+        color.setCellValueFactory(new PropertyValueFactory<Product, String[]>("color"));
         productsTV.setItems(productList);
     }
 
