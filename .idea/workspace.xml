@@ -1,23 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61c14312-a796-4209-8879-82f0fc814746" name="Default Changelist" comment="newSale">
+    <list default="true" id="61c14312-a796-4209-8879-82f0fc814746" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ProductsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/newSaleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/newSaleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/saleDetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/saleDetailsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/ProductServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/ProductServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/SaleServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/SaleServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/main.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/newSale.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Views/sales.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/db/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/Dao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/teste/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/teste/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/saleDetails.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/saleDetails.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/ProductServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/ProductServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/Dao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/Dao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/teste/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/teste/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/teste/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App/App.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +72,7 @@
   </component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="teste.App" />
+      <option name="MAIN_CLASS_NAME" value="App.App" />
       <module name="BackofficeLoja" />
       <extension name="coverage">
         <pattern>
@@ -227,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568298237176</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="newSale">
+      <created>1568308934890</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1568308934890</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

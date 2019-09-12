@@ -1,4 +1,4 @@
-package teste;
+package App;
 
 
 import Controllers.ProductsController;
