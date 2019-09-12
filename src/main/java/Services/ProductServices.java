@@ -18,6 +18,7 @@ public class ProductServices implements IProductServices {
     public static ProductServices getInstance(){ return new ProductServices();}
 
     /**
+     * Serviço que vai a base de dados buscar lstagem de produtos
      * @return Serviço que retorna da base de dados a lIstagem de produtos
      */
     @Override
@@ -27,6 +28,7 @@ public class ProductServices implements IProductServices {
     }
 
     /**
+     * Serviço que vai a base de dados buscar um produto com base no Id inserido
      * @param prodId Id de Produto
      * @return Serviço retorna um produto com base no Id inserido
      */
@@ -38,6 +40,7 @@ public class ProductServices implements IProductServices {
     }
 
     /**
+     * Serviço de Criar um novo produto
      * @param product Produto a ser inserido na base de dados
      */
     @Override
@@ -48,6 +51,7 @@ public class ProductServices implements IProductServices {
     }
 
     /**
+     * Serviço que vai atualizar um produto
      * @param product Produto a ser atualizado na base de dados
      */
     @Override

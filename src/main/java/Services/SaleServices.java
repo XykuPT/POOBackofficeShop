@@ -16,6 +16,7 @@ public class SaleServices implements ISaleServices {
     public static SaleServices getInstance(){ return new SaleServices();}
 
     /**
+     * Servico que vai a base de dados buscar a listagem de Vendas
      * @return Retorna a Listagem de Vendas
      */
     @Override
@@ -25,6 +26,7 @@ public class SaleServices implements ISaleServices {
     }
 
     /**
+     * Servico que vai a base de dados buscar a listagem de encomendas
      * @return Retorna a LIstagem de encomendas
      */
     @Override
@@ -34,6 +36,7 @@ public class SaleServices implements ISaleServices {
     }
 
     /**
+     * Serviço para ir buscar uma sale com base num identificador
      * @param saleId Id de Vendas
      * @return Com um Id de Vendas vai a base de dados buscar uma venda
      */
@@ -44,6 +47,7 @@ public class SaleServices implements ISaleServices {
     }
 
     /**
+     * Serviço que vai a base de dados criar uma venda
      * @param sale Venda a ser inserida na base de Dados
      */
     @Override
@@ -53,6 +57,7 @@ public class SaleServices implements ISaleServices {
     }
 
     /**
+     * Serviço que vai a base de dados criar uma encomenda
      * @param sale Encomenda a ser inserida na base de dados
      */
     @Override
@@ -62,6 +67,7 @@ public class SaleServices implements ISaleServices {
     }
 
     /**
+     * Serviço que vai a base de dados atualizar uma venda
      * @param sale Atualizar uma venda na base de dados
      */
     @Override

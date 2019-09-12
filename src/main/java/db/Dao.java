@@ -46,6 +46,7 @@ public class Dao {
     }
 
     /**
+     * Get the product or sales entire list
      * @param type string to filter if it is going to get Products or Sales from data base
      * @return list of Products or Sales
      */
@@ -75,6 +76,7 @@ public class Dao {
     }
 
     /**
+     * Loads a single product or sale from database based on ID
      * @param id Product or Sale ID
      * @param type string to filter if it is going to get Products or Sales from data base
      * @return A single Product or Sale
@@ -104,9 +106,10 @@ public class Dao {
 
 
     /**
+     * Inserts a Product or a sale into data base
      * @param input Product or a Sale
      * @param type string to filter if it is going to get Products or Sales from data base
-     *             Inserts a Product or a sale into data base
+     *
      */
     public static void insertDocument(Object input, String type){
 
@@ -125,8 +128,9 @@ public class Dao {
     }
 
     /**
+     * Inserts a new Sale into data base
      * @param sale new sale
-     *             Inserts a new Sale into data base
+     *
      */
     public static void insertSale(Sale sale) {
 //        ClassModel<Sale> saleModel = ClassModel.builder(Sale.class).enableDiscriminator(true).build();
@@ -138,8 +142,8 @@ public class Dao {
     }
 
     /**
+     * Inserts a new Order into data base
      * @param sale new order
-     *             Inserts a new Order into data base
      */
     public static void insertSale(Order sale) {
 
