@@ -160,6 +160,11 @@ public class Dao {
 //            collection.replaceOne(eq("saleId", input.getSaleId()), input);
 //        }
 //    }
+
+    /**
+     * Método de Atualização de um produto e substitui esse produto pelo novo na base de dados
+     * @param product
+     */
     public static void updateProduct(Product product) {
         CodecRegistry pojoCodecRegistry = fromRegistries(MongoClientSettings.getDefaultCodecRegistry(),
                 fromProviders(PojoCodecProvider.builder().automatic(true).build()));
@@ -167,6 +172,10 @@ public class Dao {
         collection.replaceOne(eq("prodId", product.getProdId()), product);
     }
 
+    /**
+     * Método de Atualização de um venda e substitui esse produto pelo novo na base de dados
+     * @param sale
+     */
     public static void updateSale(Sale sale) {
         CodecRegistry pojoCodecRegistry = fromRegistries(MongoClientSettings.getDefaultCodecRegistry(),
                 fromProviders(PojoCodecProvider.builder().automatic(true).build()));

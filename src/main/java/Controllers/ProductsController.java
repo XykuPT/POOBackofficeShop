@@ -12,6 +12,9 @@ import model.Product;
 
 import java.util.List;
 
+/**
+ * Controlador da Main page onde são apresentados a listagem dos produtos
+ */
 public class ProductsController {
 
     private ObservableList<Product> products = FXCollections.observableArrayList();
@@ -33,7 +36,7 @@ public class ProductsController {
 
 
     /**
-     * Load list of Products and bind data to TableView
+     * Método de inicilização da pagina onde é atribuido as colunas de tabela aos campos do model de Produtos e ler a listagem de produtos da base de dados
      */
     @FXML
     private void initialize() {
@@ -53,7 +56,7 @@ public class ProductsController {
 
 
     /**
-     * @return List of Products
+     * @return Método para listar os produtos, não utilizado e informação é para ir buscar directamente ao serviço
      */
     public static List<Product> getProducts() {
         try {
@@ -66,7 +69,7 @@ public class ProductsController {
 
     /**
      * @param prodId Product ID
-     * @return a Single Product from data base with the ID of input
+     * @return Método para apresentar um produto, não utilizado e informação é para ir buscar directamente ao serviço
      */
     public static Product getProduct(int prodId){
         try {
@@ -80,6 +83,7 @@ public class ProductsController {
 
     /**
      * @param product New Product to add to Database
+     * Método para inserir um produto, não utilizado e informação é para ir buscar directamente ao serviço
      */
     public static void createProduct(Product product){
         try{
@@ -92,6 +96,7 @@ public class ProductsController {
 
     /**
      * @param product Product to be updated
+     * Método para atualizar um produto, não utilizado e informação é para ir buscar directamente ao serviço
      */
     public static void updateProduct(Product product){
         try{

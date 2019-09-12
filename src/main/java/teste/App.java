@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 import java.util.Arrays;
 
 /**
- * Hello world!
+ * Inicio da aplicação e main
  *
  */
 //public class App extends Application

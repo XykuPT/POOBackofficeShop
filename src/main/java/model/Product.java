@@ -17,6 +17,9 @@ public class Product {
     private String category;
     private List<String> color;
 
+    /**
+     * Product Model
+     */
     public Product() {
 
     }

@@ -21,6 +21,9 @@ import java.util.List;
 
 import static java.lang.Integer.parseInt;
 
+/**
+ * Controller para a pagina de detalhes de uma unica venda, recebe o ID da venda
+ */
 public class saleDetailsController {
     private int saleId;
     private Sale sale;
@@ -49,7 +52,12 @@ public class saleDetailsController {
     @FXML
     private TableColumn<Product,String> price;
 
-    @FXML private void initialize() {
+    /**
+     * Método inicialização da pagina recebe o ID da venda da pagina anterior e vai a base de dados buscar todos os detalhes da venda e apresenta nos textfield's
+     * e depois vai buscar todos os produtos da venda para apresentar numa listagem
+     */
+    @FXML
+    private void initialize() {
 
         System.out.println(saleId);
 
@@ -68,6 +76,11 @@ public class saleDetailsController {
         productsTV.setItems(productList);
     }
 
+    /**
+     * Evento de Click no botão para voltar a pagina anterior
+     * @param event
+     * @throws IOException
+     */
     @FXML
     void back(ActionEvent event) throws IOException {
         AnchorPane sales = FXMLLoader.load(getClass().getResource("/sales.fxml"));
@@ -75,7 +88,10 @@ public class saleDetailsController {
     }
 
 
-
+    /**
+     * Métedo que recebe o sale ID da pagina anterior
+     * @param id
+     */
     public void setData(int id){
 
         this.saleId = id;

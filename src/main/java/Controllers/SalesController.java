@@ -23,7 +23,9 @@ import model.Sale;
 import java.io.IOException;
 import java.util.Collection;
 
-
+/**
+ * Controlador da Pagina de listagem de vendas
+ */
 public class SalesController {
 
     private ObservableList<Sale> sales = FXCollections.observableArrayList();
@@ -51,7 +53,7 @@ public class SalesController {
 //    private TableColumn<Order, String> location;
 
     /**
-     * Load table to List Sales
+     * Inicialização da Pagina onde é associado a variavel de Sale a cada coluna da tabela e carregar a listagem da base de dados na tabela
      */
     @FXML
     private void initialize() {
@@ -68,6 +70,9 @@ public class SalesController {
         salesTV.setItems(sales);
         //salesTV.setItems(orders);
 
+        /**
+         * Evento de Click na linha da tabela para passar aos detalhes
+         */
         salesTV.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -91,7 +96,7 @@ public class SalesController {
     /**
      * @param event button click event
      * @throws IOException
-     * Goes to new sale page
+     * Botão para passar para a pagina de Criação de nova venda ou encomenda
      */
     @FXML
     void newSale(ActionEvent event) throws IOException {

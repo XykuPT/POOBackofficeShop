@@ -23,7 +23,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 /**
- * newSale view Controller
+ * newSale view Controller - controlador da pagina de nova sale onde se preenche os campos para criar uma nova venda ou uma encomenda
  */
 public class newSaleController {
     @FXML
@@ -59,7 +59,8 @@ public class newSaleController {
     private Product chosenProduct = new Product();
 
     /**
-     * After page load bind list of Products do comboBox, and add event listners to changes
+     * Método de inicialização do Controlador de nova venda. Faz load dos Produtos disponiveis da base de dados para apresetentar na comboBox para ser selecionado pelo User,
+     * Associa a logica relacionado com os calculos e eventos de alteração de campos
      */
     @FXML
     private void initialize() {
@@ -115,7 +116,7 @@ public class newSaleController {
     /**
      * @param event button click
      * @throws IOException
-     * Goes back to the last page
+     * Volta para a página anterior
      */
     @FXML
     void back(ActionEvent event) throws IOException {
@@ -125,6 +126,7 @@ public class newSaleController {
 
     /**
      * @param event change radio button
+     * Botão para o utilizador selecionar ser quer inserir uma sale ou uma order e desbloqueia ou bloqueia os campos adicionas da encomenda
      */
     @FXML
     void radioChange(ActionEvent event){
@@ -140,7 +142,7 @@ public class newSaleController {
     /**
      * @param event button click event
      * @throws IOException
-     * Submits a new sale or a new order
+     * Faz submit da nova venda ou encomenda dependendo do que foi selecionado no radio button
      */
     @FXML
     void SubmitNewSale(ActionEvent event) throws IOException {
